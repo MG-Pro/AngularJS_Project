@@ -1,0 +1,5 @@
+<form name="form" ng-submit="$ctrl.submit()">
+  <h3>Form name: {{$ctrl.head}}</h3>
+  <input type="text" name="pan" ng-model="pan" required>
+  <input type="submit" value="Send" class="btn btn-success" ng-disabled="form.$invalid">
+</form>

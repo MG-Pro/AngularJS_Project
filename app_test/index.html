@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>AngularJS App</title>
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div class="container" ng-controller="MainController">
+  <h1 class="person-list">Список клиентов</h1>
+  <div class="adding">
+    <form name="form">
+      <div class="input-field" ng-repeat="item in headsList">
+        <label for={{item.name}}>{{item.name}}</label>
+        <input id={{item.name}} type="text" name={{item.name}} ng-model="data[item.name]">
+      </div>
+      <input class="submit" type="submit" ng-click="add(data)" value="ADD">
+    </form>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+      <tr>
+        <th ng-repeat="item in headsList">{{item.name}}</th>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr ng-repeat="item in list">
+        <td>{{item.CARD}}</td>
+        <td class="name">{{item.LASTNAME}}</td>
+        <td class="name">{{item.FIRSTNAME}}</td>
+        <td class="name">{{item.PATRONYMIC}}</td>
+        <td>{{item.IDPERSON}}</td>
+        <td>{{item.STATUSNAME}}</td>
+        <td>{{item.ACC1NUM}}</td>
+        <td>{{item.CARDTEMPLNAME}}</td>
+        <td>{{item.ORGNAMESHORT}}</td>
+        <td>{{item.PERSONTYPENAME}}</td>
+        <td>{{item.CURRNAME}}</td>
+        <td>{{item.IDCARD}}</td>
+        <td>{{item.BIRTHDATE}}</td>
+        <td>{{item.DOCSERIES}}</td>
+        <td>{{item.DOCNUM}}</td>
+        <td>{{item.IDTASKAUTHSTATUS}}</td>
+        <td>{{item.DOCTYPENAME}}</td>
+        <td class="btn-wrap" width="60">
+          <a href="" ng-click="remove(item)">Delete</a>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="block-wrap">
+      <div class="item" ng-repeat="item in list">
+        <div class="field">
+          <p class="item-name">CARD</p>
+          <p class="item-value">{{item.CARD}}</p>
+        </div>
+        <div class="field">
+          <p class="item-name">FIRSTNAME</p>
+          <p class="item-value">{{item.FIRSTNAME}}</p>
+        </div>
+        <div class="field">
+          <p class="item-name">PATRONYMIC</p>
+          <p class="item-value">{{item.PATRONYMIC}}</p>
+        </div>
+        <div class="field">
+          <p class="item-name">IDPERSON</p>
+          <p class="item-value">{{item.IDPERSON}}</p>
+        </div>
+        <div class="field">
+          <p class="item-name">STATUSNAME</p>
+          <p class="item-value">{{item.STATUSNAME}}</p>
+        </div>
+        <div class="field">
+          <p class="item-name">ACC1NUM</p>
+          <p class="item-value">{{item.ACC1NUM}}</p>
+        </div>
+        <div class="field">
+          <p class="item-name">CARDTEMPLNAME</p>
+          <p class="item-value">{{item.CARDTEMPLNAME}}</p>
+        </div>
+        <div class="field">
+          <p class="item-name">ORGNAMESHORT</p>
+          <p class="item-value">{{item.ORGNAMESHORT}}</p>
+        </div>
+        <div class="field">
+          <p class="item-name">LASTNAME</p>
+          <p class="item-value">{{item.LASTNAME}}</p>
+        </div>
+        <div class="field">
+          <p class="item-name">PERSONTYPENAME</p>
+          <p class="item-value">{{item.PERSONTYPENAME}}</p>
+        </div>
+        <div class="field">
+          <p class="item-name">CURRNAME</p>
+          <p class="item-value">{{item.CURRNAME}}</p>
+        </div>
+        <div class="field">
+          <p class="item-name">IDCARD</p>
+          <p class="item-value">{{item.IDCARD}}</p>
+        </div>
+        <div class="field">
+          <p class="item-name">BIRTHDATE</p>
+          <p class="item-value">{{item.BIRTHDATE}}</p>
+        </div>
+        <div class="field">
+          <p class="item-name">DOCSERIES</p>
+          <p class="item-value">{{item.DOCSERIES}}</p>
+        </div>
+        <div class="field">
+          <p class="item-name">DOCNUM</p>
+          <p class="item-value">{{item.DOCNUM}}</p>
+        </div>
+        <div class="field">
+          <p class="item-name">IDTASKAUTHSTATUS</p>
+          <p class="item-value">{{item.IDTASKAUTHSTATUS}}</p>
+        </div>
+        <div class="field">
+          <p class="item-name">DOCTYPENAME</p>
+          <p class="item-value">{{item.DOCTYPENAME}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="libs/angular.min.js"></script>
+<script src="app.js"></script>
+<script src="Controllers/MainController.js"></script>
+<script src="Services/DataService.js"></script>
+</body>
+</html>

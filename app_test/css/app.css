@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  color: #353535;
+  background-color: #ffffff;
+  line-height: 1.25;
+  font-family: Arial;
+}
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+}
+
+.table-wrap {
+  overflow-x: scroll;
+  margin-bottom: 30px;
+}
+
+table {
+  border-radius: 10px;
+}
+
+thead tr > th:first-child {
+  border-radius: 10px 0px 0 0;
+}
+
+thead tr > th:last-child {
+  border-radius: 0 10px 0 0;
+}
+
+tbody tr:last-child > td:last-child {
+  border-radius: 0 0 10px 0px;
+}
+
+tbody tr:last-child > td:first-child {
+  border-radius: 0 0 0px 10px;
+}
+
+td,
+th {
+  font-size: 14px;
+  padding: 0 5px;
+}
+
+thead tr {
+  height: 40px !important;
+}
+
+.name {
+  text-align: center;
+}
+
+.btn-wrap {
+  padding: 10px;
+  border: 0;
+  background: none;
+  width: 30px;
+}
+.btn-wrap a {
+  padding: 5px 10px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+tr {
+  background-color: #d4d4d4;
+}
+tr:hover .btn-wrap a {
+  color: #ff3d33;
+}
+tr:hover {
+  font-weight: 700;
+}
+
+tr:nth-child(odd) {
+  background-color: #8f8f8f;
+}
+
+.adding {
+  margin-bottom: 30px;
+}
+.adding .submit {
+  padding: 5px 10px;
+  color: #8f8f8f;
+  cursor: pointer;
+}
+.adding .submit:hover {
+  color: black;
+}
+.adding .input-field label {
+  font-size: 14px;
+  width: 200px;
+  display: inline-block;
+}
+.adding .input-field input {
+  border: 1px solid black;
+}
+
+.block-wrap {
+  font-size: 0;
+  margin-bottom: 20px;
+}
+.block-wrap .item {
+  display: inline-block;
+  width: 30%;
+  margin-bottom: 10px;
+}
+.block-wrap .item .field {
+  display: block;
+}
+.block-wrap .item .item-name {
+  font-size: 14px;
+  font-weight: 700;
+}
+.block-wrap .item .item-value {
+  font-size: 14px;
+  color: #8f8f8f;
+}
+.block-wrap div:nth-child(3n+3) {
+  width: 40%;
+}
+
+/*# sourceMappingURL=app.css.map */
